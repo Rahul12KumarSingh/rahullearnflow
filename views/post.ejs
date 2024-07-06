@@ -89,7 +89,11 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-9">
-              <!-- <video src=<%- post.description %>></video> -->
+              
+              <video id="my-video" controls>
+                <source src="<%= post.video %>" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
              
               <!-- Article body -->
               <article><%- post.description %></article>

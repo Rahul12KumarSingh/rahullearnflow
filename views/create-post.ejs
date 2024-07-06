@@ -481,12 +481,15 @@
         description: editor1.getHTMLCode(),
       };
 
+      console.log("video uploaded response : " , videoUploadResponse) ;
+
       if (videoUploadResponse.ok) {
-        newPost.video = `https://dt7hj5bw4w6bv.cloudfront.net/${videoKeyName}`;
+        newPost.video = `https://learnflow-app123.s3.ap-south-1.amazonaws.com/${videoKeyName}`;
       }
 
+      console.log("thumbnail uploaded response : " , thumbnailUploadResponse) ;
       if (thumbnailUploadResponse.ok) {
-        newPost.thumbnail = `https://dt7hj5bw4w6bv.cloudfront.net/${thumbnailKeyName}`;
+        newPost.thumbnail = `https://learnflow-app123.s3.ap-south-1.amazonaws.com/${thumbnailKeyName}`;
       }
 
       const response = await fetch("/post/create", {
@@ -541,3 +544,4 @@
     }
   });
 </script> -->
+<!-- https://learnflow-app123.s3.ap-south-1.amazonaws.com/energy-removebg-preview-e38608be-d096-4a5a-89f0-68b1682d6ab6.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAQ3D4RLXKSO222KKA%2F20240630%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20240630T130434Z&X-Amz-Expires=3600&X-Amz-Signature=2cd13925f38c07312aca26cbde07622f587e83c45ed655a0a5498869883e02d6&X-Amz-SignedHeaders=host&x-id=PutObject -->

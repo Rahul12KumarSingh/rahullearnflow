@@ -32,7 +32,7 @@ const getPresignedUrl = async (fileName, fileType) => {
   console.log(uniqueFileName);
 
   const command = new PutObjectCommand({
-    Bucket: "learnflow-app-pw",
+    Bucket: "learnflow-app123",
     Key: uniqueFileName,
     ContentType: fileType,
   });
@@ -73,3 +73,4 @@ router.get("/presignedUrl", ensureAuth, async (req, res) => {
 });
 
 module.exports = router;
+
